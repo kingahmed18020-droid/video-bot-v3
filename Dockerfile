@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg aria2 util-linux \
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg aria2 util-linux gcc libc6-dev \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m -u 10001 -d /home/bot bot
 # يوتيوب محتاج JS runtime لحل التوقيعات
